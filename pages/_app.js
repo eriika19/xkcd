@@ -1,7 +1,46 @@
-import '../styles/globals.css'
+import React from 'react';
+import App from 'next/app';
+// Bulma css
+import 'bulma/css/bulma.min.css';
+// Redux
+import { Provider } from 'react-redux';
+import withRedux from 'next-redux-wrapper';
+import withReduxSaga from 'next-redux-saga';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+// Configfuration for redux store
+import configureStore from 'store/configureStore';
+// Custom css
+import 'styles/styles.css';
+// Tab Titles
+import { TAB_TITLES as titles } from 'utils';
+import { Footer, Navbar, PageTab } from 'components';
+
+class xkcdApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    return {
+      pageProps: {
+        // Call page-level getInitialProps
+        ...(Component.getInitialProps ? await Component.getInitialProps(ctx) : {}),
+      },
+    };
+  }
+
+  render() {
+    const { Component, pageProps, router, store } = this.props;
+
+    return (
+      <React.Fragment>
+        {/* <Provider store={store}> */}
+        <PageTab title={titles[router.pathname]} />
+        <Navbar activeRoute={router.pathname} />
+        <Component {...pageProps} />
+        <Footer />
+        {/* </Provider> */}
+      </React.Fragment>
+    );
+  }
 }
 
-export default MyApp
+export default xkcdApp;
+
+// export default withRedux(configureStore)(withReduxSaga(xkcdApp));

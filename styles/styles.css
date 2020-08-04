@@ -1,0 +1,26 @@
+main {
+  min-height: 70vh;
+}
+
+.footer {
+  padding: 0.7rem 1rem 1.5rem;
+}
+
+a {
+  font-weight: bold;
+  color: darkslategrey;
+}
+a.navbar-item:focus,
+a.navbar-item:hover {
+  font-size: large;
+  transition: all 0.35s ease-in-out;
+}
+a.navbar-item,
+a.navbar-item:focus:not(.is-active),
+a.navbar-item:hover:not(.is-active) {
+  color: rgba(112, 128, 144, 0.707);
+}
+
+.image.is-96x96 {
+  height: 65px;
+}

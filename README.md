@@ -1,30 +1,187 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Framework](https://img.shields.io/badge/Framework-React.js-important?style=plastic)](https://create-react-app.dev/docs)
+[![server](https://img.shields.io/badge/server-express-yellow?style=plastic)](https://expressjs.com/)
+[![styled with bulma](https://img.shields.io/badge/styled-Emotion-pink?style=plastic)](https://bulma.io/)
+[![formatter with prettier](https://img.shields.io/badge/formatter-prettier-blueviolet?style=plastic)](https://github.com/prettier/prettier)
+[![styled guide](https://img.shields.io/badge/style_guide-Airbnb-violet?style=plastic)](https://github.com/airbnb/javascript)
+[![deploy](https://img.shields.io/:deploy-Vercel-blue.svg?style=plastic)](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
 
-## Getting Started
+---
 
-First, run the development server:
+<br />
+<p align="center">
+  <a href="https://xkcd.now.sh/">
+    <img src="public/favicon.ico" alt="Logo" width="200">
+  </a>
+<br />
+<br />
+  <p align="center">
+El visor XKCD te permite explorar y guardar todos los cómics de https://xkcd.com/ . !Crea tu lista de cómics favoritos y disfruta de lo mejor de XKCD!   <br />
+    <a href="https://github.com/eriika19/xkcd/tree/master/src"><strong>Explorar proyecto »</strong></a>
+    <br />
+    <br />
+    <a href="https://gipphy.herokuapp.com">Ir a Sitio</a>
+    ·
+    <a href="https://github.com/eriika19/xkcd/issues">Reportar Problema</a>
+    ·
+  </p>
+  <br />
+</p>
+ 
+ <h3 align="center"> Next. js, Redux-Saga, Bulma, Axios, Express, Jest, Babel, Eslint, Lint-staged</h3>
+ 
+ <br />
 
-```bash
-npm run dev
-# or
-yarn dev
+---
+
+# Contenido
+
+- [Acerca del Proyecto](#acerca-del-proyecto)
+  - [Herramientas](#_herramientas_)
+  - [Próximos alcances](#próximos-alcances)
+- [Correr proyecto localmente](#correr-proyecto-localmente)
+- [Contacto](#contacto)
+
+ <br />
+
+## Acerca del proyecto 🚀
+
+Esta aplicación se desarrollo para poder visualizar y guardar tus cómics de XKCD favoritos, de
+manera fácil y rápida.
+
+Se consumió el dataset de Melp implementando solicitudes Axios
+
+Esta aplicación se desarrollo como app web que permite buscar y visulaizar los mejores GIFs de
+manera fácil y rápida.
+
+Implementando axios para realizar las peticiones a la API de XKCD.
+
+ <br />
+
+### _*Herramientas*_ 🛠️
+
+- [Next.js](https://github.com/zeit/next.js/)
+- [Redux-Saga](https://github.com/bmealhouse/next-redux-saga)
+- [Axios](https://github.com/axios/axios)
+- [Express](https://expressjs.com/)
+- [Emotion](https://emotion.sh/)
+- [Hooks](https://es.reactjs.org/docs/hooks-intro.html)
+- [Git](https://git-scm.com/)
+- [Eslint](https://eslint.org/)
+- [Lint-staged](https://openbase.io/js/lint-staged)
+- [Husky](https://github.com/typicode/husky)
+- [Now de Vercel](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+- [Prettier](https://github.com/prettier/prettier)
+- [Airbnb Style Guide](https://github.com/airbnb/javascript)
+
+### Próximos alcances
+
+- [ ] Agregar templates de campos de búsqueda para una búsqueda express.
+- [ ] Añadir tests en todos los componentes.
+
+## Correr proyecto localmente
+
+Este proyecto se puede correr en un equipo local, clonando este repositori e instalando localmente
+las dependencias requeridas.
+
+### Clonar
+
+Introducir el siguiente comando para clonar este repositorio:
+
+```
+$ git clone https://github.com/eriika19/xkcd.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instalar dependencias
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Una vez clonado se debe ir al directorio raíz del proyecto y ejecutar el siguiente comando para
+instalar todas las dependencias listadas en el `package.json`:
 
-## Learn More
+```
+$ yarn
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Variables de ambiente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Se deben definir la REACT_APP_API_KEY y REACT_APP_API_URL en las variables de ambiente, ya que este
+repositorio no las incluye. Es posible correr `cp .env.example .env` para definir las propias
+variables de ambiente en archivo `.env`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Ejemplo:
 
-## Deploy on Vercel
+```shell
+REACT_APP_XKCD_API_URL=http://xkcd.com
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```shell
+REACT_APP_XKCD_API_KEY=************
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Correr proyecto
+
+- Para correr XKCD en un ambiente de producción ejecutar:
+
+```
+$ yarn dev
+```
+
+- Para correr Giphy en un ambiente de producción ejecutar:
+
+```
+$ yarn build
+```
+
+```
+$ yarn start
+```
+
+Una vez que el proyecto este corriendo estará listo en `http://localhost:3000/`
+
+### Ejecutar tests
+
+Para ejecutar los tests correr los siguientes comandos:
+
+```
+$ yarn test
+```
+
+```
+$ yarn test:coverage
+```
+
+### Prettier and Eslint
+
+Prettier y Eslint se ejecutarán automáticamente al realizar un _commit_ a través de la configuración
+de `lint-staged` y `husky`. Sin embargo, también pueden ser ejecutados independientemente con los
+siguientes comandos:
+
+**Prettier**
+
+```
+$ yarn prettier
+```
+
+**Eslint**
+
+```
+$ yarn lint
+```
+
+### Comentarios
+
+Cualquier duda o comentario no dudes en abrir un issue. 😊
+
+---
+
+> ## _Contacto_
+
+Creado con ❤️ por [Itzel Enciso](https://github.com/eriika19)
+
+Sitio Web - [itzelenciso.com](https://itzelenciso.com/)
+
+LinkedIn - [@itzelenciso](https://www.linkedin.com/in/itzelenciso/)
+
+Correo Gmail -
+[enciso.iq@gmail.com](<mailto:enciso.iq@gmail.com?subject=Reclutamiento&body=¡Buen día! el motivo de contacto es:>)
+
+¡Gracias por visitar!

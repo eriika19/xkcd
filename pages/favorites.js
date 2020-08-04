@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Home = () => {
+const Favorites = () => {
   /*
    * Use 'useEffect' to get most recent comic data
    */
@@ -10,10 +10,9 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Inicio</h1>
-      <h1>Hola</h1>
+      <h1>Favoritos</h1>
     </main>
   );
 };
 
-export default Home;
+export default Favorites;
