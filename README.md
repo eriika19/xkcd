@@ -13,10 +13,11 @@
     <img src="public/favicon.ico" alt="Logo" width="200">
   </a>
 <br />
-<h1 align="center">XKCD-Mark</h1>
+<h2 align="center">XKCD-Mark</h2>
 <br />
   <p align="center">
-El visor XKCD-Mark te permite explorar y guardar todos los cómics de https://xkcd.com/ . !Crea tu lista de cómics favoritos y disfruta de lo mejor de XKCD-Mark!   <br />
+El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD. <br />
+¡Marca tus cómics favoritos y disfruta cuando quiereas de ellos con XKCD-Mark!   <br />
     <a href="https://github.com/eriika19/xkcd/tree/master/src"><strong>Explorar proyecto »</strong></a>
     <br />
     <br />
@@ -46,15 +47,10 @@ El visor XKCD-Mark te permite explorar y guardar todos los cómics de https://xk
 
 ## Acerca del proyecto 🚀
 
-Esta aplicación se desarrollo para poder visualizar y guardar tus cómics de XKCD favoritos, de
-manera fácil y rápida.
+Esta aplicación se desarrollo para poder marcar y visualizar tus cómics de favoritos de XKCD de una
+forma fácil y rápida.
 
-Se consumió el dataset de Melp implementando solicitudes Axios
-
-Esta aplicación se desarrollo como app web que permite buscar y visulaizar los mejores GIFs de
-manera fácil y rápida.
-
-Implementando axios para realizar las peticiones a la API de XKCD.
+Esta aplicación se desarrollo implementando axios para realizar las peticiones a la API de XKCD.
 
  <br />
 
