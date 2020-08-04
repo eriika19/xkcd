@@ -13,11 +13,11 @@
     <img src="public/favicon.ico" alt="Logo" width="200">
   </a>
 <br />
-<h2 align="center">XKCD-Mark</h2>
+<h1 align="center">XKCD-Mark</h1>
 <br />
   <p align="center">
-El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD. <br />
-¡Marca tus cómics favoritos y disfruta cuando quiereas de ellos con XKCD-Mark!   <br />
+El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD. 
+¡Marca tus cómics favoritos y disfruta de ellos cuando quieras!   <br />
     <a href="https://github.com/eriika19/xkcd/tree/master/src"><strong>Explorar proyecto »</strong></a>
     <br />
     <br />
