@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Renders Navbar 1`] = `
+<nav
+  className="navbar"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <figure
+        className="image is-96x96"
+      >
+        <img
+          alt="xkcd-logo"
+          src="/xkcd.png"
+        />
+      </figure>
+      <span
+        className="navbar-burger burger"
+        data-target="navbarMenuHeroB"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </span>
+    </div>
+    <div
+      className="navbar-menu"
+      id="navbarMenuHeroB"
+    >
+      <div
+        className="navbar-end"
+      >
+        <a
+          className="navbar-item"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Inicio
+        </a>
+        <a
+          className="navbar-item"
+          href="/favorites"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+        >
+          Favoritos
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+`;

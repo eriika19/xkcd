@@ -9,7 +9,7 @@ const Favorites = () => {
   // }, []);
 
   return (
-    <main>
+    <main className='container'>
       <h1>Favoritos</h1>
     </main>
   );

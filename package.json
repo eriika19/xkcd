@@ -6,10 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
-    "test": "react-app-rewired test",
-    "test:coverage": "npm test -- --coverage --watchAll=false",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage --watchAll",
     "prettier": "prettier \"**/*.+(js|jsx|json|yml|yaml|md)\" --write",
-    "lint": "eslint src"
+    "lint": "eslint ."
   },
   "husky": {
     "hooks": {

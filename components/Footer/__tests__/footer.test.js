@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { Footer } from '../../PageTab/__tests__/node_modules/components';
+import { Footer } from 'components';
 
 describe('Footer', () => {
   const footerElement = renderer.create(<Footer />).toJSON();

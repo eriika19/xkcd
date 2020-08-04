@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Renders Footer 1`] = `
+<footer
+  className="footer"
+>
+  <div
+    className="content has-text-centered"
+  >
+    <p>
+      <strong>
+        XKCD
+      </strong>
+       fue construida con ❤ para
+      <img
+        alt="resuelve-logo"
+        src="/resuelve.png"
+        width="85"
+      />
+      por 
+      <a
+        href="https://itzelenciso.com"
+      >
+         Itzel Enciso
+      </a>
+      .
+    </p>
+    <p>
+      El proyecto se ha deployado con Vercel ▲ y el código vive en
+      <a
+        href="https://github.com/eriika19/xkcd"
+      >
+         GitHub Repo 
+      </a>
+       . ¡Disfruta!
+    </p>
+  </div>
+</footer>
+`;

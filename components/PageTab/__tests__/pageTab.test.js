@@ -1,8 +1,9 @@
 import React from 'react';
-import { PageTab } from 'components';
 import HeadManager from 'next/dist/client/head-manager';
 import { HeadManagerContext } from 'next/dist/next-server/lib/head-manager-context';
 import { render, waitFor } from '@testing-library/react';
+
+import { PageTab } from 'components';
 
 describe('PageTab', () => {
   it('Should change the document title from the page tab', async () => {
@@ -12,10 +13,10 @@ describe('PageTab', () => {
     document.head.appendChild(meta);
     render(
       <HeadManagerContext.Provider value={headManager.updateHead}>
-        <PageTab title='Home' favico='/favicon.ico' />
+        <PageTab title='' />
       </HeadManagerContext.Provider>,
     );
 
-    await waitFor(() => expect(document.title).toEqual('Home'));
+    await waitFor(() => expect(document.title).toEqual(''));
   });
 });

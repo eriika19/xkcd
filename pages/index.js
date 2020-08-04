@@ -9,7 +9,7 @@ const Home = () => {
   // }, []);
 
   return (
-    <main>
+    <main className='container'>
       <h1>Inicio</h1>
       <h1>Hola</h1>
     </main>
