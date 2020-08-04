@@ -9,13 +9,14 @@
 
 <br />
 <p align="center">
-  <a href="https://xkcd.now.sh/">
+  <a href="https://xkcd-mark.vercel.app/">
     <img src="public/favicon.ico" alt="Logo" width="200">
   </a>
 <br />
+<h1 align="center">XKCD-Mark</h1>
 <br />
   <p align="center">
-El visor XKCD te permite explorar y guardar todos los cómics de https://xkcd.com/ . !Crea tu lista de cómics favoritos y disfruta de lo mejor de XKCD!   <br />
+El visor XKCD-Mark te permite explorar y guardar todos los cómics de https://xkcd.com/ . !Crea tu lista de cómics favoritos y disfruta de lo mejor de XKCD-Mark!   <br />
     <a href="https://github.com/eriika19/xkcd/tree/master/src"><strong>Explorar proyecto »</strong></a>
     <br />
     <br />
@@ -69,7 +70,7 @@ Implementando axios para realizar las peticiones a la API de XKCD.
 - [Eslint](https://eslint.org/)
 - [Lint-staged](https://openbase.io/js/lint-staged)
 - [Husky](https://github.com/typicode/husky)
-- [Now de Vercel](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Vercel](https://vercel.com)
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Prettier](https://github.com/prettier/prettier)
 - [Airbnb Style Guide](https://github.com/airbnb/javascript)

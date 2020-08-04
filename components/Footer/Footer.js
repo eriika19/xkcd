@@ -2,7 +2,7 @@ const Footer = () => (
   <footer className='footer'>
     <div className='content has-text-centered'>
       <p>
-        <strong>XKCD</strong> fue construida con &#10084; para
+        <strong>XKCD-Mark</strong> fue construida con &#10084; para
         <img src='/resuelve.png' width='85' alt='resuelve-logo' />
         por <a href='https://itzelenciso.com'> Itzel Enciso</a>.
       </p>

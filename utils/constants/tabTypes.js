@@ -1,8 +1,8 @@
 /******************** XKCD *******************/
 
 const TAB_TITLES = {
-  '/': 'XKCD | Inicio',
-  '/favorites': ' XKCD | Favoritos',
+  '/': 'XKCD-Mark | Inicio',
+  '/favorites': ' XKCD-Mark | Favoritos',
 };
 
 export default TAB_TITLES;
