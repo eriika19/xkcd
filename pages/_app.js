@@ -30,17 +30,17 @@ class XkcdMark extends App {
 
     return (
       <React.Fragment>
-        {/* <Provider store={store}> */}
-        <PageTab title={titles[router.pathname]} />
-        <Navbar active_route={router.pathname} />
-        <Component {...pageProps} />
-        <Footer />
-        {/* </Provider> */}
+        <Provider store={store}>
+          <PageTab title={titles[router.pathname]} />
+          <Navbar active_route={router.pathname} />
+          <Component {...pageProps} />
+          <Footer />
+        </Provider>
       </React.Fragment>
     );
   }
 }
 
-export default XkcdMark;
+// export default XkcdMark;
 
-// export default withRedux(configureStore)(withReduxSaga(XkcdMark));
+export default withRedux(configureStore)(withReduxSaga(XkcdMark));

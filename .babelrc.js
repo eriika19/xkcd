@@ -8,7 +8,7 @@ const aliases = {
   utils: `${root}/utils`,
   store: `${root}/store`,
   actions: `${root}/store/actions`,
-  selectors: `${root}/store/slectors`,
+  selectors: `${root}/store/selectors`,
   'jest-utils': `${root}/jest/utils`,
 };
 

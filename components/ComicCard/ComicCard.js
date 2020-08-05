@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
-import { xkcd } from 'store/models';
+import { useDispatch, useSelector } from 'react-redux';
 
-const {
-  target: { comic },
-} = xkcd;
+import { getStringDate } from 'utils';
+import { addComic, deleteComic } from 'actions';
+import { getFavoritesData } from 'selectors';
 
-const ComicCard = ({ mark_text }) => {
-  const { safe_title, alt, img, month, year, day, transcript } = comic;
+const ComicCard = ({ comicData, add_text, delete_text }) => {
+  const dispatch = useDispatch();
+  const favorites = useSelector(getFavoritesData);
+  const { alt, day, img, month, num, safe_title, transcript, year } = comicData;
 
-  const date = new Date(year, month, day);
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const stringDate = date.toLocaleDateString('es-ES', options);
+  const stringDate = getStringDate({ year, month, day });
+  const isInFavArray = favorites.some(e => e.num === num);
 
-  const handleClick = e => {
-    console.log('click para añadir a favoritos', comic);
-    //   dispatch(fetchGifs({ value: valueInput, trending: false }));
+  const handleClick = () => {
+    isInFavArray ? dispatch(deleteComic(comicData)) : dispatch(addComic(comicData));
   };
 
   return (
@@ -38,7 +38,7 @@ const ComicCard = ({ mark_text }) => {
       </div>
       <footer className='card-footer'>
         <p className='card-footer-item'>
-          <a onClick={handleClick}>{mark_text}</a>
+          <a onClick={handleClick}>{isInFavArray ? delete_text : add_text}</a>
         </p>
       </footer>
     </div>
@@ -46,11 +46,14 @@ const ComicCard = ({ mark_text }) => {
 };
 
 ComicCard.defaultProps = {
-  mark_text: 'Añadir a Favoritos ❤',
+  add_text: 'Agregar a Favoritos ❤',
+  delete_text: 'Eliminar de Favoritos ❤',
 };
 
 ComicCard.propTypes = {
-  mark_text: PropTypes.string.isRequired,
+  comicData: PropTypes.object.isRequired,
+  add_text: PropTypes.string.isRequired,
+  delete_text: PropTypes.string.isRequired,
 };
 
 export default ComicCard;

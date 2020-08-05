@@ -21,7 +21,7 @@ const NavbarInput = ({ placeholder, help }) => {
         <div className='control has-icons-left'>
           <input
             className='input'
-            type='search'
+            type='number'
             placeholder={placeholder}
             onChange={e => {
               setValueInput(e.target.value);

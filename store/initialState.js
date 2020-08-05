@@ -1,7 +1,8 @@
-import { xkcd } from './models';
+import { comic, favorites } from './models';
 
 const initialState = {
-  xkcd,
+  comic,
+  favorites,
 };
 
 export default initialState;

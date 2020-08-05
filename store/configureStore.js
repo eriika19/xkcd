@@ -1,11 +1,8 @@
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-// import rootReducer from './reducers';
-// import rootSaga from './sagas';
+import rootReducer from './reducers';
+import rootSaga from './sagas';
 import initialState from './initialState';
-
-const rootReducer = () => {};
-const rootSaga = {};
 
 const bindMiddleware = middleware => {
   if (process.env.NODE_ENV !== 'production') {

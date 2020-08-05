@@ -1,3 +1,3 @@
-import { xkcd } from './xkcdModel';
+import { comic, favorites } from './xkcdModels';
 
-export { xkcd };
+export { comic, favorites };
