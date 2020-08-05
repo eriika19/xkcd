@@ -10,8 +10,8 @@ const NavbarInput = ({ placeholder, help }) => {
   const [helpHidden, setHelpHidden] = useState(true);
 
   const handleKeyPress = e => {
-    e.preventDefault();
     if (e.key === 'Enter' && valueInput) {
+      e.preventDefault();
       dispatch(getComic({ num: valueInput }));
     }
   };
@@ -23,6 +23,7 @@ const NavbarInput = ({ placeholder, help }) => {
           <input
             className='input'
             type='search'
+            value={valueInput}
             placeholder={placeholder}
             onChange={e => {
               setValueInput(e.target.value);
