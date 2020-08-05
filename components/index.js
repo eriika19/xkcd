@@ -1,5 +1,7 @@
+import { ComicCard } from './ComicCard';
 import { Footer } from './Footer';
 import { Navbar } from './Navbar';
 import { PageTab } from './PageTab';
+import { Pagination } from './Pagination';
 
-export { Footer, Navbar, PageTab };
+export { ComicCard, Footer, Navbar, PageTab, Pagination };

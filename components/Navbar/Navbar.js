@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { NavbarItem } from '.';
+import { NavbarInput, NavbarItem } from '.';
 
 const NAV_ITEMS = [
   { page: 'Inicio', route: '/' },
@@ -21,8 +21,9 @@ const Navbar = props => {
           <figure className='image is-96x96'>
             <img src='/xkcd.png' alt='xkcd-logo' />
           </figure>
+          <NavbarInput />
           <span
-            className={isNavOpen ? 'navbar-burger burger is-active' : 'navbar-burger burger'}
+            className={'navbar-burger burger ' + (isNavOpen ? 'is-active' : '')}
             data-target='navbarMenuHeroB'
             onClick={toggleNav}
           >
@@ -31,8 +32,8 @@ const Navbar = props => {
             <span></span>
           </span>
         </div>
-        <div className={isNavOpen ? 'navbar-menu is-active' : 'navbar-menu'} id='navbarMenuHeroB'>
-          <div className={isNavOpen ? 'navbar-end is-active' : 'navbar-end'}>
+        <div className={'navbar-menu ' + (isNavOpen ? 'is-active' : '')} id='navbarMenuHeroB'>
+          <div className={'navbar-end ' + (isNavOpen ? 'is-active' : '')}>
             {NAV_ITEMS.map(item => (
               <NavbarItem key={`${item.page}-nav-item`} {...item} {...props} />
             ))}

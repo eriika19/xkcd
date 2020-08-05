@@ -15,7 +15,7 @@ import 'styles/styles.css';
 import { TAB_TITLES as titles } from 'utils';
 import { Footer, Navbar, PageTab } from 'components';
 
-class xkcdApp extends App {
+class XkcdMark extends App {
   static async getInitialProps({ Component, ctx }) {
     return {
       pageProps: {
@@ -32,7 +32,7 @@ class xkcdApp extends App {
       <React.Fragment>
         {/* <Provider store={store}> */}
         <PageTab title={titles[router.pathname]} />
-        <Navbar activeRoute={router.pathname} />
+        <Navbar active_route={router.pathname} />
         <Component {...pageProps} />
         <Footer />
         {/* </Provider> */}
@@ -41,6 +41,6 @@ class xkcdApp extends App {
   }
 }
 
-export default xkcdApp;
+export default XkcdMark;
 
-// export default withRedux(configureStore)(withReduxSaga(xkcdApp));
+// export default withRedux(configureStore)(withReduxSaga(XkcdMark));

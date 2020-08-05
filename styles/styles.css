@@ -2,14 +2,11 @@ main {
   min-height: 70vh;
 }
 
-.footer {
-  padding: 0.7rem 1rem 1.5rem;
-}
-
 a {
   font-weight: bold;
   color: darkslategrey;
 }
+
 a.navbar-item:focus,
 a.navbar-item:hover {
   font-size: large;
@@ -23,4 +20,21 @@ a.navbar-item:hover:not(.is-active) {
 
 .image.is-96x96 {
   height: 65px;
+}
+
+.image.comic {
+  width: 60%;
+  left: 20%;
+}
+
+.navbar-item.field{
+  justify-content: center;
+}
+
+.navbar-brand {
+  min-width: 70%;
+}
+
+.pagination {
+  margin: 0.5em auto 1.7em;
 }

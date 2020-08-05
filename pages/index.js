@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 
+import { ComicCard, Pagination } from 'components';
+
 const Home = () => {
   /*
    * Use 'useEffect' to get most recent comic data
@@ -10,8 +12,8 @@ const Home = () => {
 
   return (
     <main className='container'>
-      <h1>Inicio</h1>
-      <h1>Hola</h1>
+      <ComicCard />
+      <Pagination />
     </main>
   );
 };

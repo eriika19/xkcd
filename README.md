@@ -100,18 +100,14 @@ $ yarn
 
 ### Variables de ambiente
 
-Se deben definir la REACT_APP_API_KEY y REACT_APP_API_URL en las variables de ambiente, ya que este
-repositorio no las incluye. Es posible correr `cp .env.example .env` para definir las propias
-variables de ambiente en archivo `.env`.
+Se deben definir las REACT_APP_API_URL en las variables de ambiente, ya que estas no se incluyen en
+el repo. Es posible correr `cp .env.example .env` para definir las propias variables de ambiente en
+archivo `.env`.
 
 Ejemplo:
 
 ```shell
-REACT_APP_XKCD_API_URL=http://xkcd.com
-```
-
-```shell
-REACT_APP_XKCD_API_KEY=************
+REACT_APP_XKCD_API_URL_START=http://xkcd.com
 ```
 
 ### Correr proyecto

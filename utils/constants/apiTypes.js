@@ -1,2 +1,2 @@
-// export const API_BASE_URL = 'http://xkcd.com';
-export const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/__mocks__';
+export const API_BASE_URL_START = process.env.REACT_APP_XKCD_API_URL_START;
+export const API_BASE_URL_END = process.env.REACT_APP_XKCD_API_URL_END;

@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const NavbarItem = ({ route, page, activeRoute }) => (
+const NavbarItem = ({ route, page, active_route }) => (
   <Link href={route}>
-    <a className={route === activeRoute ? 'navbar-item is-active' : 'navbar-item'}>{page}</a>
+    <a className={'navbar-item ' + (route === active_route ? 'is-active' : '')}>{page}</a>
   </Link>
 );
 
 NavbarItem.propTypes = {
-  activeRoute: PropTypes.string,
+  active_route: PropTypes.string,
   page: PropTypes.string.isRequired,
   route: PropTypes.string.isRequired,
 };
