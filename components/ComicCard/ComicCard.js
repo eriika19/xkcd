@@ -34,7 +34,7 @@ const ComicCard = ({ comicData, add_text, delete_text }) => {
       </div>
       <div className='card-content has-text-centered'>
         <p className='subtitle'>{alt}</p>
-        <div className='content'>{transcript}</div>
+        {transcript}
       </div>
       <footer className='card-footer'>
         <p className='card-footer-item'>

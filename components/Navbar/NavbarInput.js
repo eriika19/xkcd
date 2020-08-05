@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-
 import PropTypes from 'prop-types';
-// import { useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
+
+import { getComic } from 'actions';
 
 const NavbarInput = ({ placeholder, help }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const [valueInput, setValueInput] = useState('');
   const [helpHidden, setHelpHidden] = useState(true);
 
   const handleKeyPress = e => {
-    if (e.key === 'Enter') {
-      console.log(valueInput);
-      //   dispatch(fetchGifs({ value: valueInput, trending: false }));
+    e.preventDefault();
+    if (e.key === 'Enter' && valueInput) {
+      dispatch(getComic({ num: valueInput }));
     }
   };
 
@@ -21,7 +22,7 @@ const NavbarInput = ({ placeholder, help }) => {
         <div className='control has-icons-left'>
           <input
             className='input'
-            type='number'
+            type='search'
             placeholder={placeholder}
             onChange={e => {
               setValueInput(e.target.value);

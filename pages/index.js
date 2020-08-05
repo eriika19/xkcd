@@ -18,9 +18,9 @@ const Home = () => {
   const state = useSelector(getState);
   const comicData = useSelector(getComicData);
 
-  console.log('====================================');
-  console.log('State from home : ', state);
-  console.log('====================================');
+  // console.log('====================================');
+  // console.log('State from home : ', state);
+  // console.log('====================================');
 
   return (
     <main className='container'>

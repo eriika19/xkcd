@@ -11,17 +11,18 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.response.use(
   // Do something with response data
   res => {
-    if (res.statusCode === 404) {
-      alert('Comic does not exist yet.');
-    }
+    console.log('====================================');
+    console.log('res: ', res);
+    console.log('====================================');
     return res;
   },
   // Do something with response error
   err => {
+    if (err.status === 404) {
+      alert('Este cómic todavía no existe');
+    }
     console.log(err);
-    const responseError = new Error(err.message);
-    console.log('responseError', responseError);
-    return responseError;
+    return err;
   },
 );
 

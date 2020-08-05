@@ -8,6 +8,7 @@ const NAV_ITEMS = [
 ];
 
 const Navbar = props => {
+  const { active_route } = props;
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
@@ -21,7 +22,7 @@ const Navbar = props => {
           <figure className='image is-96x96'>
             <img src='/xkcd.png' alt='xkcd-logo' />
           </figure>
-          <NavbarInput />
+          {active_route === NAV_ITEMS[0].route ? <NavbarInput /> : ''}
           <span
             className={'navbar-burger burger ' + (isNavOpen ? 'is-active' : '')}
             data-target='navbarMenuHeroB'

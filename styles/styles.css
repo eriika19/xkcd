@@ -18,6 +18,10 @@ a.navbar-item:hover:not(.is-active) {
   color: rgba(112, 128, 144, 0.707);
 }
 
+.card {
+  margin: 1em auto;
+}
+
 .image.is-96x96 {
   height: 65px;
 }
@@ -27,7 +31,7 @@ a.navbar-item:hover:not(.is-active) {
   left: 20%;
 }
 
-.navbar-item.field{
+.navbar-item.field {
   justify-content: center;
 }
 

@@ -1,16 +1,17 @@
-import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
+import { getFavoritesData } from 'selectors';
+import { ComicCard } from 'components';
 
 const Favorites = () => {
-  /*
-   * Use 'useEffect' to get most recent comic data
-   */
-  // useEffect(() => {
-  //   dispatch({ type: GET_BALANCES_LIST });
-  // }, []);
+  const favorites = useSelector(getFavoritesData);
 
   return (
     <main className='container'>
-      <h1>Favoritos</h1>
+      <h1 className='title'>Favoritos</h1>
+      {favorites.map(comic => (
+        <ComicCard key={`card-${comic.num}`} comicData={comic} />
+      ))}
     </main>
   );
 };
