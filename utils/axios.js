@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { API_BASE_URL_START } from './constants';
+import { API_BASE_URL } from './constants';
 
 const axiosInstance = axios.create({
-  baseURL: API_BASE_URL_START,
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
@@ -11,9 +11,6 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.response.use(
   // Do something with response data
   res => {
-    console.log('====================================');
-    console.log('res: ', res);
-    console.log('====================================');
     return res;
   },
   // Do something with response error
@@ -21,7 +18,6 @@ axiosInstance.interceptors.response.use(
     if (err.status === 404) {
       alert('Este cómic todavía no existe');
     }
-    console.log(err);
     return err;
   },
 );

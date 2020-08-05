@@ -1,8 +1,8 @@
-import { axios, API_BASE_URL_END } from 'utils';
+import { axios } from 'utils';
 
 const getComic = async num => {
-  const url = num ? num + API_BASE_URL_END : API_BASE_URL_END;
-  return await axios.get(url);
+  const param = num ? num : 'latest';
+  return await axios.get(`/?comic=${param}`);
 };
 
 export default getComic;
