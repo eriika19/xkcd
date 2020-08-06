@@ -10,14 +10,15 @@ module.exports = {
     '^pages(.*)$': '<rootDir>/pages$1',
     '^store(.*)$': '<rootDir>/store$1',
     '^utils(.*)$': '<rootDir>/utils$1',
+    '^jest-factories(.*)$': '<rootDir>/jest/factories$1',
     '^jest-utils(.*)$': '<rootDir>/jest/utils$1',
   },
   collectCoverageFrom: [
     'components/**/*.{js,jsx}',
-    'pages/**/*.{js,jsx}',
+    'pages/*.{js,jsx}',
     '!pages/_app.js',
     '!store/*.{js,jsx}',
     '!store/*/**.{js,jsx}',
-    '!index.js',
+    '!*/**/index.js',
   ],
 };

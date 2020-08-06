@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarInput Renders NavbarInput 1`] = `
+<div
+  className="column"
+>
+  <div
+    className="navbar-item field"
+  >
+    <div
+      className="control has-icons-left"
+    >
+      <input
+        className="input"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        onKeyPress={[Function]}
+        placeholder="Buscar cómic..."
+        type="search"
+        value=""
+      />
+      <span
+        className="icon is-small is-left"
+      >
+        🔍
+      </span>
+      <p
+        className="help has-text-grey has-text-weight-medium is-hidden"
+      >
+        <small>
+          Ingresa número/id de cómic
+        </small>
+      </p>
+    </div>
+  </div>
+</div>
+`;

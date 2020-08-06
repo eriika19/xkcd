@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavbarItem Renders NavbarItem 1`] = `
+<a
+  className="navbar-item is-active"
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  home
+</a>
+`;

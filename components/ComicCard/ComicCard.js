@@ -1,21 +1,15 @@
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { getStringDate } from 'utils';
-import { addComic, deleteComic } from 'actions';
 import { getFavoritesData } from 'selectors';
 
-const ComicCard = ({ comicData, add_text, delete_text }) => {
-  const dispatch = useDispatch();
+const ComicCard = ({ comicData, toogleFavItem, add_text, delete_text }) => {
   const favorites = useSelector(getFavoritesData);
-  const { alt, day, img, month, num, safe_title, transcript, year } = comicData;
+  const { alt, day, img, month, num, safe_title, year } = comicData;
 
   const stringDate = getStringDate({ year, month, day });
   const isInFavArray = favorites.some(e => e.num === num);
-
-  const handleClick = () => {
-    isInFavArray ? dispatch(deleteComic(comicData)) : dispatch(addComic(comicData));
-  };
 
   return (
     <div className='card'>
@@ -32,13 +26,14 @@ const ComicCard = ({ comicData, add_text, delete_text }) => {
           <img src={img} alt='comic-image' />
         </figure>
       </div>
-      <div className='card-content has-text-centered'>
+      <div className='card-content has-text-centered mb-2'>
         <p className='subtitle'>{alt}</p>
-        {transcript}
       </div>
       <footer className='card-footer'>
         <p className='card-footer-item'>
-          <a onClick={handleClick}>{isInFavArray ? delete_text : add_text}</a>
+          <a onClick={() => toogleFavItem(isInFavArray)} aria-label='search-input'>
+            {isInFavArray ? delete_text : add_text}
+          </a>
         </p>
       </footer>
     </div>
@@ -52,6 +47,7 @@ ComicCard.defaultProps = {
 
 ComicCard.propTypes = {
   comicData: PropTypes.object.isRequired,
+  toogleFavItem: PropTypes.func.isRequired,
   add_text: PropTypes.string.isRequired,
   delete_text: PropTypes.string.isRequired,
 };

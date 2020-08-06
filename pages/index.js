@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getLastComic } from 'actions';
-import { getState, getComicData } from 'selectors';
+import { getLastComic, addComic, deleteComic } from 'actions';
+import { getComicData } from 'selectors';
 import { ComicCard, Pagination } from 'components';
 
 const Home = () => {
   const dispatch = useDispatch();
+  const comicData = useSelector(getComicData);
 
   /*
    * Use 'useEffect' to get most recent comic data
@@ -15,12 +16,13 @@ const Home = () => {
     dispatch(getLastComic());
   }, []);
 
-  const state = useSelector(getState);
-  const comicData = useSelector(getComicData);
+  const toggleFavItem = deleteItem => {
+    deleteItem ? dispatch(deleteComic(comicData)) : dispatch(addComic(comicData));
+  };
 
   return (
     <main className='container'>
-      <ComicCard comicData={comicData} />
+      <ComicCard comicData={comicData} toogleFavItem={toggleFavItem} />
       <Pagination />
     </main>
   );

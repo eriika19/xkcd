@@ -9,6 +9,7 @@ const aliases = {
   store: `${root}/store`,
   actions: `${root}/store/actions`,
   selectors: `${root}/store/selectors`,
+  'jest-factories': `${root}/jest/factories`,
   'jest-utils': `${root}/jest/utils`,
 };
 

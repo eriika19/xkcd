@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComicCard Renders ComicCard  1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-content"
+  >
+    <span>
+      <p
+        className="title"
+      >
+        Exposure Notification
+      </p>
+    </span>
+    <time
+      dateTime="5-8-2020"
+    >
+      <small>
+        5 de septiembre de 2020
+      </small>
+    </time>
+  </div>
+  <div
+    className="card-image"
+  >
+    <figure
+      className="image comic"
+    >
+      <img
+        alt="comic-image"
+        src="https://imgs.xkcd.com/comics/exposure_notification.png"
+      />
+    </figure>
+  </div>
+  <div
+    className="card-content has-text-centered mb-2"
+  >
+    <p
+      className="subtitle"
+    >
+      I don't see why everyone is so hungry for BAD news, but fine, I'll give in to feedback and add a dark mode.
+    </p>
+  </div>
+  <footer
+    className="card-footer"
+  >
+    <p
+      className="card-footer-item"
+    >
+      <a
+        aria-label="search-input"
+        onClick={[Function]}
+      >
+        Agregar a Favoritos ❤
+      </a>
+    </p>
+  </footer>
+</div>
+`;
