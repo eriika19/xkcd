@@ -31,9 +31,7 @@ const ComicCard = ({ comicData, toogleFavItem, add_text, delete_text }) => {
       </div>
       <footer className='card-footer'>
         <p className='card-footer-item'>
-          <a onClick={() => toogleFavItem(isInFavArray)} aria-label='search-input'>
-            {isInFavArray ? delete_text : add_text}
-          </a>
+          <a onClick={() => toogleFavItem(isInFavArray)}>{isInFavArray ? delete_text : add_text}</a>
         </p>
       </footer>
     </div>

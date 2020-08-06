@@ -34,6 +34,7 @@ const NavbarInput = ({ placeholder, help }) => {
           />
           <span className='icon is-small is-left'>🔍</span>
           <p
+            data-testid='help'
             className={
               'help has-text-grey has-text-weight-medium ' + (helpHidden ? 'is-hidden' : '')
             }

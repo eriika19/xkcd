@@ -1,6 +1,7 @@
 import React from 'react';
 import configureStore from 'redux-mock-store';
-import { render, fireEvent } from '@testing-library/react';
+import { fireEvent } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 
 import { renderWithProvider, renderWithProviderSnapshot } from 'jest-utils';
 import { comicData } from 'jest-factories';
@@ -8,21 +9,13 @@ import { ComicCard } from 'components';
 
 const mockStore = configureStore([]);
 
+const toogleFavItem = jest.fn().mockImplementation(props => {
+  return props ? 'delete' : 'add';
+});
+
+const comicCardElement = <ComicCard comicData={comicData} toogleFavItem={toogleFavItem} />;
+
 describe('ComicCard', () => {
-  const store = mockStore({
-    favorites: [],
-  });
-
-  const storeWithFav = mockStore({
-    favorites: [comicData],
-  });
-
-  const toogleFavItem = jest.fn().mockImplementation(props => {
-    return props ? 'delete' : 'add';
-  });
-
-  const comicCardElement = <ComicCard comicData={comicData} toogleFavItem={toogleFavItem} />;
-
   it('Renders ComicCard ', () => {
     const comicCard = renderWithProviderSnapshot(comicCardElement, {
       mockStore,
@@ -30,19 +23,19 @@ describe('ComicCard', () => {
     expect(comicCard).toMatchSnapshot();
   });
 
-  it('Renders ComicCard with the add to favorites option', () => {
-    const { getByText } = renderWithProvider(comicCardElement, {
-      mockStore,
+  it('Call Toogle function with button card', async () => {
+    const storeWithFav = mockStore({
+      favorites: [comicData],
     });
-    const button = getByText('Agregar a Favoritos ❤');
-    expect(button).toBeInTheDocument();
-  });
 
-  it('Renders ComicCard with the delete from favorites option', () => {
     const { getByText } = renderWithProvider(comicCardElement, {
       storeWithFav,
     });
-    const button = getByText('Agregar a Favoritos ❤');
-    expect(button).toBeInTheDocument();
+    const cardButton = getByText('Agregar a Favoritos ❤');
+    expect(cardButton).toBeInTheDocument();
+    await act(async () => {
+      fireEvent.click(cardButton);
+    });
+    expect(toogleFavItem).toBeCalled();
   });
 });

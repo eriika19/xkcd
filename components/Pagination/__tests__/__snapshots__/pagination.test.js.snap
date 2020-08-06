@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pagination Renders Pagination 1`] = `
+exports[`Pagination Renders Pagination  1`] = `
 <nav
   aria-label="pagination"
   className="pagination column is-rounded"
@@ -8,15 +8,15 @@ exports[`Pagination Renders Pagination 1`] = `
 >
   <button
     className="pagination-previous button is-dark"
-    name="prev"
     onClick={[Function]}
+    title="prev"
   >
     Siguiente
   </button>
   <button
     className="pagination-next button is-dark"
-    name="next"
     onClick={[Function]}
+    title="next"
   >
     Anterior
   </button>

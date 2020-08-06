@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NavbarInput Renders NavbarInput 1`] = `
+exports[`NavbarInput Renders NavbarInput  1`] = `
 <div
   className="column"
 >
@@ -27,6 +27,7 @@ exports[`NavbarInput Renders NavbarInput 1`] = `
       </span>
       <p
         className="help has-text-grey has-text-weight-medium is-hidden"
+        data-testid="help"
       >
         <small>
           Ingresa número/id de cómic

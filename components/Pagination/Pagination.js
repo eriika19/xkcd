@@ -9,7 +9,7 @@ const Pagination = ({ next_text, previous_text }) => {
   const currentComic = useSelector(getCurrentComic);
 
   const handleClick = e => {
-    e.target.name === next
+    e.target.title === 'next'
       ? dispatch(getComic({ num: currentComic + 1 }))
       : dispatch(getComic({ num: currentComic - 1 }));
   };
@@ -17,13 +17,13 @@ const Pagination = ({ next_text, previous_text }) => {
   return (
     <nav className='pagination column is-rounded' role='navigation' aria-label='pagination'>
       <button
-        name='prev'
+        title='prev'
         onClick={e => handleClick(e)}
         className='pagination-previous button is-dark'
       >
         {previous_text}
       </button>
-      <button name='next' onClick={e => handleClick(e)} className='pagination-next button is-dark'>
+      <button title='next' onClick={e => handleClick(e)} className='pagination-next button is-dark'>
         {next_text}
       </button>
     </nav>

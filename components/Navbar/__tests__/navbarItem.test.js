@@ -8,8 +8,8 @@ describe('NavbarItem', () => {
     active_route: '/',
     page: 'home',
   };
-  const navbarItemElement = renderer.create(<NavbarItem {...props} />).toJSON();
 
+  const navbarItemElement = renderer.create(<NavbarItem {...props} />).toJSON();
   it('Renders NavbarItem', () => {
     expect(navbarItemElement).toMatchSnapshot();
   });

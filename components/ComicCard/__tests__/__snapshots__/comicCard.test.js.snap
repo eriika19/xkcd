@@ -50,7 +50,6 @@ exports[`ComicCard Renders ComicCard  1`] = `
       className="card-footer-item"
     >
       <a
-        aria-label="search-input"
         onClick={[Function]}
       >
         Agregar a Favoritos ❤

@@ -7,9 +7,8 @@ import Favorites from '../favorites';
 const mockStore = configureStore([]);
 
 describe('Favorites', () => {
-  const favoritesElement = renderWithProviderSnapshot(<Favorites />, { mockStore }).toJSON();
-
   it('Renders Favorites page', () => {
+    const favoritesElement = renderWithProviderSnapshot(<Favorites />, { mockStore }).toJSON();
     expect(favoritesElement).toMatchSnapshot();
   });
 });
