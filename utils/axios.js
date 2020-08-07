@@ -11,9 +11,6 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.response.use(
   // Do something with response data
   res => {
-    if (res.response.status === 404) {
-      alert('Este cómic todavía no existe');
-    }
     return res;
   },
   // Do something with response error
