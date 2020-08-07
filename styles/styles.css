@@ -27,7 +27,7 @@ a.navbar-item:hover:not(.is-active) {
 }
 
 .image.comic {
-  width: 60%;
+  max-width: 60%;
   left: 20%;
 }
 
