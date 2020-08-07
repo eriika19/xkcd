@@ -15,6 +15,9 @@ axiosInstance.interceptors.response.use(
   },
   // Do something with response error
   err => {
+    console.log('====================================');
+    console.log(err.response);
+    console.log('====================================');
     if (err.response.status === 404) {
       alert('Este cómic todavía no existe');
     }
