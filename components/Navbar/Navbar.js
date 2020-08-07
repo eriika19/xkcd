@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { NavbarInput, NavbarItem } from '.';
 
 const NAV_ITEMS = [
-  { page: 'Inicio', route: '/' },
+  { page: 'Buscador', route: '/' },
   { page: 'Favoritos', route: '/favorites' },
 ];
 

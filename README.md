@@ -37,10 +37,19 @@ El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD.
 
 # Contenido
 
+Link a la parte del código que te sientas más orgulloso Link a la aplicación en producción (usa un
+servicio gratuito como now, heroku, firebase, etc)
+
 - [Acerca del Proyecto](#acerca-del-proyecto)
-  - [Herramientas](#_herramientas_)
+
+  - [Retos](#retos)
   - [Próximos alcances](#próximos-alcances)
+  - [Snippet](#snippet)
+  - [Herramientas](#_herramientas_)
+  - [Demo](#demo)
+
 - [Correr proyecto localmente](#correr-proyecto-localmente)
+
 - [Contacto](#contacto)
 
  <br />
@@ -50,9 +59,28 @@ El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD.
 Esta aplicación se desarrollo para poder marcar y visualizar tus cómics de favoritos de XKCD de una
 forma fácil y rápida.
 
-Esta aplicación se desarrollo implementando axios para realizar las peticiones a la API de XKCD.
+Se implementó axios para realizar las peticiones a la API de XKCD.
 
  <br />
+
+### Retos
+
+- Diseñar la estructura para implementar un flujo de ADD/DELETE de una manera simplificada pero con
+  estructura bien definida y diferenciada uno del otro. Solución. Definir dos categorías de
+  _acciones_ / _reducer_ .
+- Comic: Ejecuta la función de **getComic()** que hace las llamadas a la API y maneja la páginación
+  de cómic correspondiente
+- Favorites: Ejecuta las sagas de _add_ y _delete_ que ejecutan la suma o resta de un elemento
+  dentro del arreglo de cómics favoritos
+
+- Hacer test para verificar cuando dispatch es ejecutado.  
+  Solución: Se creó una función la cuál activa un observer que nos ayuda a verificar si la
+  funcionalidad _useDispatch_ es ejecutada
+
+### Próximos alcances
+
+- [ ] Agregar templates/botones de campos de búsqueda por mes.
+- [ ] Añadir tests al store.
 
 ### _*Herramientas*_ 🛠️
 
@@ -71,10 +99,7 @@ Esta aplicación se desarrollo implementando axios para realizar las peticiones 
 - [Prettier](https://github.com/prettier/prettier)
 - [Airbnb Style Guide](https://github.com/airbnb/javascript)
 
-### Próximos alcances
-
-- [ ] Agregar templates de campos de búsqueda para una búsqueda express.
-- [ ] Añadir tests en todos los componentes.
+## Código a resaltar
 
 ## Correr proyecto localmente
 
