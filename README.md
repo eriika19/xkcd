@@ -43,10 +43,9 @@ servicio gratuito como now, heroku, firebase, etc)
 - [Acerca del Proyecto](#acerca-del-proyecto)
 
   - [Retos](#retos)
-  - [Próximos alcances](#próximos-alcances)
   - [Snippet](#snippet)
+  - [Próximos alcances](#próximos-alcances)
   - [Herramientas](#_herramientas_)
-  - [Demo](#demo)
 
 - [Correr proyecto localmente](#correr-proyecto-localmente)
 
@@ -68,19 +67,33 @@ Se implementó axios para realizar las peticiones a la API de XKCD.
 - Diseñar la estructura para implementar un flujo de _ADD/DELETE_ de una manera simplificada pero
   con estructura bien definida y diferenciada uno del otro. Solución. Definir dos categorías de
   _acciones_ / _reducer_ .
-- **Comic**: Ejecuta la función de **getComic()** que hace las llamadas a la API y maneja la
-  páginación de cómic correspondiente
-- **Favorites**: Ejecuta las sagas de _add_ y _delete_ que ejecutan la suma o resta de un elemento
-  dentro del arreglo de cómics favoritos
+
+  - **Comic**: Ejecuta la función de **getComic()** que hace las llamadas a la API y maneja la
+    páginación de cómic correspondiente
+  - **Favorites**: Ejecuta las sagas de _add_ y _delete_ que ejecutan la suma o resta de un elemento
+    dentro del arreglo de cómics favoritos
 
 - Hacer _test_ para verificar cuando dispatch es ejecutado.  
    Solución: Se creó una función la cuál activa un observer que nos ayuda a verificar si la funcionalidad
-  _useDispatch_ es ejecutada <br />
+  _useDispatch_ es ejecutada
+
+  <br />
 
 ### Próximos alcances
 
 - [ ] Agregar templates/botones de campos de búsqueda por mes.
-- [ ] Añadir tests al store.
+- [ ] Añadir tests al store(redux-saga).
+
+<br />
+
+### **Snippet**
+
+<p align="center">
+  <a href="https://github.com/eriika19/xkcd/blob/master/components/Navbar/__tests__/navbarInput.test.js">
+    <img src="public/snippet.png" alt="snippet">
+  </a>
+<br />  
+<br />
 
 ### _*Herramientas*_ 🛠️
 
@@ -98,14 +111,6 @@ Se implementó axios para realizar las peticiones a la API de XKCD.
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Prettier](https://github.com/prettier/prettier)
 - [Airbnb Style Guide](https://github.com/airbnb/javascript)
-
-## Código a resaltar
-
-<p align="center">
-  <a href="https://github.com/eriika19/xkcd/blob/master/components/Navbar/__tests__/navbarInput.test.js">
-    <img src="public/snippet.png" alt="snippet">
-  </a>
-<br />
 
 ## Correr proyecto localmente
 
