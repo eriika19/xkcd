@@ -65,17 +65,17 @@ Se implementó axios para realizar las peticiones a la API de XKCD.
 
 ### Retos
 
-- Diseñar la estructura para implementar un flujo de ADD/DELETE de una manera simplificada pero con
-  estructura bien definida y diferenciada uno del otro. Solución. Definir dos categorías de
+- Diseñar la estructura para implementar un flujo de _ADD/DELETE_ de una manera simplificada pero
+  con estructura bien definida y diferenciada uno del otro. Solución. Definir dos categorías de
   _acciones_ / _reducer_ .
-- Comic: Ejecuta la función de **getComic()** que hace las llamadas a la API y maneja la páginación
-  de cómic correspondiente
-- Favorites: Ejecuta las sagas de _add_ y _delete_ que ejecutan la suma o resta de un elemento
+- **Comic**: Ejecuta la función de **getComic()** que hace las llamadas a la API y maneja la
+  páginación de cómic correspondiente
+- **Favorites**: Ejecuta las sagas de _add_ y _delete_ que ejecutan la suma o resta de un elemento
   dentro del arreglo de cómics favoritos
 
-- Hacer test para verificar cuando dispatch es ejecutado.  
-  Solución: Se creó una función la cuál activa un observer que nos ayuda a verificar si la
-  funcionalidad _useDispatch_ es ejecutada
+- Hacer _test_ para verificar cuando dispatch es ejecutado.  
+   Solución: Se creó una función la cuál activa un observer que nos ayuda a verificar si la funcionalidad
+  _useDispatch_ es ejecutada <br />
 
 ### Próximos alcances
 
@@ -100,6 +100,12 @@ Se implementó axios para realizar las peticiones a la API de XKCD.
 - [Airbnb Style Guide](https://github.com/airbnb/javascript)
 
 ## Código a resaltar
+
+<p align="center">
+  <a href="https://github.com/eriika19/xkcd/blob/master/components/Navbar/__tests__/navbarInput.test.js">
+    <img src="public/snippet.png" alt="snippet">
+  </a>
+<br />
 
 ## Correr proyecto localmente
 
