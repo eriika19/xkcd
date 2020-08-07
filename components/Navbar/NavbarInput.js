@@ -1,18 +1,22 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { getComic } from 'actions';
+import { getTotal } from 'selectors';
 
 const NavbarInput = ({ placeholder, help }) => {
   const dispatch = useDispatch();
   const [valueInput, setValueInput] = useState('');
   const [helpHidden, setHelpHidden] = useState(true);
+  const total = useSelector(getTotal);
 
   const handleKeyPress = e => {
     if (e.key === 'Enter' && valueInput) {
       e.preventDefault();
-      dispatch(getComic({ num: valueInput }));
+      valueInput <= total
+        ? dispatch(getComic({ num: valueInput }))
+        : alert(`No existe aún este cómic, el último cómic publicado es el ${total}`);
     }
   };
 
