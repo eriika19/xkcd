@@ -9,9 +9,11 @@ const Favorites = () => {
   return (
     <main className='container'>
       <h1 className='title'>Favoritos</h1>
-      {favorites.map(comic => (
-        <ComicCard key={`card-${comic.num}`} comicData={comic} />
-      ))}
+      {favorites ? (
+        favorites.map(comic => <ComicCard key={`card-${comic.num}`} comicData={comic} />)
+      ) : (
+        <p className='subtitle'>No hay cómics guardados en favoritos</p>
+      )}
     </main>
   );
 };
