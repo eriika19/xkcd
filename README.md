@@ -37,9 +37,6 @@ El visor XKCD-Mark te permite explorar y guardar tus cómics favoritos de XKCD.
 
 # Contenido
 
-Link a la parte del código que te sientas más orgulloso Link a la aplicación en producción (usa un
-servicio gratuito como now, heroku, firebase, etc)
-
 - [Acerca del Proyecto](#acerca-del-proyecto)
 
   - [Retos](#retos)
