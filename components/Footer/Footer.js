@@ -2,9 +2,8 @@ const Footer = () => (
   <footer className='footer'>
     <div className='content has-text-centered'>
       <p>
-        <strong>XKCD-Mark</strong> fue construida con &#10084; para
-        <img src='/resuelve.png' width='85' alt='resuelve-logo' />
-        por <a href='https://itzelenciso.com'> Itzel Enciso</a>.
+        <strong>XKCD-Mark</strong> fue construida con &#10084; por
+        <a href='https://itzelenciso.com'> Itzel Enciso</a>.
       </p>
       <p>
         El proyecto se ha deployado con Vercel &#9650; y el código vive en
